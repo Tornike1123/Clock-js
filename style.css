@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    display: grid;
+    text-align: center;
+    height: 100%;
+    place-items: center; /*გაცენტვრა*/
+    background-color: black;
+}
+.wrapper{
+    background-color: green;
+    height: 200px;
+    width: 720px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #14ffe757, #ffeb3b3a, #ff00e165);
+    cursor: default;
+    animation: animate 1.5s linear infinite;
+    box-shadow: 10px 10px 20px 20px green;
+   
+}
+.wrapper .display{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    height: 170px;
+    width: 690px;
+    text-align: center;
+    border-radius: 10px;
+}
+.wrapper .display #time{
+    line-height: 170px; /* ხაზოვანი გაცენტვრა*/
+    font-size: 120px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text; /*ტექსტი გახდეს ბექროუნდის ფერი*/
+    -webkit-text-fill-color: transparent; /* ტექსტი გახდეს ბექროუნდის ფერი */ 
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+    
+}
